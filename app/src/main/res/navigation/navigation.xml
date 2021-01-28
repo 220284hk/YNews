@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tabLayoutFragment">
+
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.hyunkwak.ynews.ui.fragments.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFragment"
+        android:name="com.hyunkwak.ynews.ui.fragments.ViewFragment"
+        android:label="ViewFragment"
+        tools:layout="@layout/fragment_view">
+        <argument
+            android:name="articleKey"
+            app:argType="com.hyunkwak.ynews.domain.DatabaseArticle" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabLayoutFragment"
+        android:name="com.hyunkwak.ynews.ui.fragments.TabLayoutFragment"
+        android:label="TabLayoutFragment"
+        tools:layout="@layout/fragment_tablayout">
+        <action
+            android:id="@+id/action_tabLayoutFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.hyunkwak.ynews.ui.fragments.tablayout.WorldTabFragment"
+        android:label="FirstFragment"
+        >
+        <action
+            android:id="@+id/action_firstFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.hyunkwak.ynews.ui.fragments.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">YNews</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    // list_single_item format
+    <string name="author_tv_format">Author: %s</string>
+
+    // Placeholder Strings
+    <string name="test">There are %s results which match your query</string>
+    <string name="temp_tool_title">Prince William and Kate Middletons children make red carpet debut</string>
+    <string name="temp_tool_source">Source: CBS</string>
+    <string name="temp_tool_author">Author: Liz Calvario‍</string>
+</resources>
